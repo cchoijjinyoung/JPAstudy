@@ -2,9 +2,8 @@ package jpabook.jpashop.domain;
 
 import lombok.Getter;
 import lombok.Setter;
-import org.apache.tomcat.jni.Address;
-
 import javax.persistence.*;
+import jpabook.jpashop.domain.Address;
 
 @Entity
 @Getter @Setter
@@ -18,7 +17,7 @@ public class Delivery {
     private Order order;
 
     @Embedded
-    private Address addresss;
+    private Address address;
 
     @Enumerated(EnumType.STRING)
     private DeliveryStatus status; //READY, COMP

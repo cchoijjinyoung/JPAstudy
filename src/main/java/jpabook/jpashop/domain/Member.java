@@ -16,7 +16,7 @@ public class Member {
     private Long id;
 
     @Embedded
-    private Adress adress;
+    private Address address;
 
     private String name;
 
