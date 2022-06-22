@@ -17,7 +17,7 @@ public class ItemRepository {
         if (item.getId() == null) {
             em.persist(item);
         } else {
-            em.merge(item);
+            em.merge(item); // merge - 실무에서 거의 쓸 일 없다.
         }
     }
 
@@ -26,7 +26,7 @@ public class ItemRepository {
     }
 
     public List<Item> findAll() {
-        return em.createQuery("select i from item i", Item.class)
+        return em.createQuery("select i from Item i", Item.class)
                 .getResultList();
     }
 }
